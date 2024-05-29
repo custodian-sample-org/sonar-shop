@@ -7,9 +7,9 @@ class App extends Component {
       another: 3
     }
   }
-  static foo = 1;
-  static fooBar = 21;
-  static bar = (input) => {
+  static readonly foo = 1;
+  static readonly fooBar = 21;
+  static readonly bar = (input) => {
     console.log(input);
   }
   static another(input) {
@@ -19,7 +19,6 @@ class App extends Component {
     document.title = `You clicked ${this.state.count} times`;
   }
   componentDidUpdate(prevProps) {
-    // alert("This component was mounted");
     document.title = `You clicked ${this.state.count} times`;
     const { isOpen } = this.state;
     if (isOpen && !prevProps.isOpen) {
@@ -34,7 +33,7 @@ class App extends Component {
     this.setState({ name: e.target.value, another: "cooler" });
   };
   async asyncAlert() {
-    await alert("async alert");
+    alert("async alert");
   }
   render() {
     return (
