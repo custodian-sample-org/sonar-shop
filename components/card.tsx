@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-export const Card = (props) => {
-  return (
+export const Card = (props) => (
     <div className="card">
       <h3>{props.title}{props.count ? `(${props.count})` : ''}</h3>
       {props.children}
     </div>
   );
-};
 
 
 Card.propTypes = {

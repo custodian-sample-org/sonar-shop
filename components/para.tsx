@@ -1,3 +1,1 @@
-export const Paragraph = (props: { children: string }) => {
-  return <p>{props.children}</p>;
-};
+export const Paragraph = (props: { children: string }) => <p>{props.children}</p>;
